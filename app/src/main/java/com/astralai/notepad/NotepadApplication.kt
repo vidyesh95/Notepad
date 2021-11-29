@@ -1,8 +1,10 @@
 package com.astralai.notepad
 
 import android.app.Application
+import dagger.hilt.android.HiltAndroidApp
 import timber.log.Timber
 
+@HiltAndroidApp
 class NotepadApplication : Application() {
     override fun onCreate() {
         super.onCreate()
@@ -12,7 +14,7 @@ class NotepadApplication : Application() {
                 super.log(priority, "global_tag_$tag", message, t)
             }
 
-            override fun createStackElementTag(element: StackTraceElement): String? {
+            override fun createStackElementTag(element: StackTraceElement): String {
                 return String.format(
                     "(%s:%s)",
                     element.fileName,
