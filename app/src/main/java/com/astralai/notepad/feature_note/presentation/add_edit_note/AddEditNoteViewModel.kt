@@ -27,7 +27,7 @@ class AddEditNoteViewModel @Inject constructor(
     private val _noteContent = mutableStateOf(NoteTextFieldState(hint = "Enter content"))
     val noteContent: State<NoteTextFieldState> = _noteContent
 
-    private val _noteColor = mutableStateOf<Int>(Note.noteColors.random().toArgb())
+    private val _noteColor = mutableStateOf(Note.noteColors.random().toArgb())
     val noteColor: State<Int> = _noteColor
 
     sealed class UiEvent {

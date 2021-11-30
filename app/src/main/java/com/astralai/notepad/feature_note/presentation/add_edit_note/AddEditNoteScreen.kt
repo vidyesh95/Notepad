@@ -24,7 +24,6 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import com.astralai.notepad.feature_note.domain.model.Note
 import com.astralai.notepad.feature_note.presentation.add_edit_note.components.TransparentHintTextField
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 
