@@ -2,6 +2,7 @@
 
 ![GitHub issues](https://img.shields.io/github/issues/vidyesh95/Notepad)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/vidyesh95/Notepad)
+![Discord](https://img.shields.io/discord/692995245574717440)
 
 Notepad application written in kotlin for android platform.
 ![summary](https://user-images.githubusercontent.com/13806493/144009106-d9282ec5-ea7f-410f-a359-c1a31770be5c.png)
