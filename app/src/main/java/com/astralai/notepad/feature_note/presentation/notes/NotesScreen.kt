@@ -13,9 +13,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
+import com.astralai.notepad.core.util.TestTags
 import com.astralai.notepad.feature_note.presentation.notes.components.NoteItem
 import com.astralai.notepad.feature_note.presentation.notes.components.OrderSection
 import com.astralai.notepad.feature_note.presentation.util.Screen
@@ -43,9 +45,11 @@ fun NotesScreen(navController: NavController, viewModel: NotesViewModel = hiltVi
         },
         scaffoldState = scaffoldState
     ) {
-        Column(modifier = Modifier
-            .fillMaxSize()
-            .padding(16.dp)) {
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(16.dp)
+        ) {
             Row(
                 modifier = Modifier.fillMaxWidth(),
                 horizontalArrangement = Arrangement.SpaceBetween,
@@ -70,7 +74,8 @@ fun NotesScreen(navController: NavController, viewModel: NotesViewModel = hiltVi
                 OrderSection(
                     modifier = Modifier
                         .fillMaxWidth()
-                        .padding(vertical = 16.dp),
+                        .padding(vertical = 16.dp)
+                        .testTag(TestTags.ORDER_SECTION),
                     onOrderChange = {
                         viewModel.onEvent(NotesEvent.Order(it))
                     },
