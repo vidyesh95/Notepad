@@ -89,7 +89,7 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_version"
 
     // LeakCanary
-    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.7'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:2.8'
 
     // Dagger Hilt with Kotlin
     implementation "com.google.dagger:hilt-android:$hilt_version"
